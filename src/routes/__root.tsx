@@ -16,6 +16,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { Preloader } from "../components/Preloader";
 import { Chatbot } from "../components/Chatbot";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
