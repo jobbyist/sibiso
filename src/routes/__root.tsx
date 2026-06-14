@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { title: "Your Strategic Marketing & Business Growth Partner - Sibiso" },
       { name: "description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
 systems designed to attract, convert, and retain customers." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { property: "og:title", content: "Your Strategic Marketing & Business Growth Partner - Sibiso" },
       { property: "og:description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
 systems designed to attract, convert, and retain customers." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { name: "twitter:title", content: "Your Strategic Marketing & Business Growth Partner - Sibiso" },
       { name: "twitter:description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
 systems designed to attract, convert, and retain customers." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e5969137-30f5-4a78-9454-a7b771faeffe/id-preview-fdf470dd--5e00e1c3-eb5a-4f9f-8807-2be9fd5646f9.lovable.app-1781428033808.png" },
