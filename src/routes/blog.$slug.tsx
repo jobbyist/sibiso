@@ -70,7 +70,7 @@ function Article() {
           <h1 className="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl">{post.title}</h1>
           <p className="mt-4 text-lg text-muted-foreground">{post.excerpt}</p>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/90">
-            {post.content.map((para, i) => (
+            {post.content.map((para: string, i: number) => (
               <p key={i}>{para}</p>
             ))}
           </div>
