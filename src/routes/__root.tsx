@@ -8,15 +8,9 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { ThemeProvider } from "next-themes";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
-import { Preloader } from "../components/Preloader";
-import { Chatbot } from "../components/Chatbot";
-import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -83,41 +77,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sibiso Marketing — Strategic Growth Systems" },
-      {
-        name: "description",
-        content:
-          "We don't just market businesses. We build systems that drive growth — combining strategy, technology, automation and data intelligence into predictable revenue.",
-      },
-      { name: "author", content: "Sibiso Marketing" },
-      { property: "og:title", content: "Sibiso Marketing — Strategic Growth Systems" },
-      {
-        property: "og:description",
-        content: "Strategic growth systems that attract, convert, and retain customers for measurable, sustainable growth.",
-      },
+      { title: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { name: "description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
+systems designed to attract, convert, and retain customers." },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { property: "og:description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
+systems designed to attract, convert, and retain customers." },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Sibiso Marketing" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sibiso Marketing - Your Turnkey Marketing Solutions Partner" },
+      { name: "twitter:description", content: "Sibiso Marketing helps businesses turn visibility into revenue through strategic marketing
+systems designed to attract, convert, and retain customers." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e5969137-30f5-4a78-9454-a7b771faeffe/id-preview-fdf470dd--5e00e1c3-eb5a-4f9f-8807-2be9fd5646f9.lovable.app-1781428033808.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e5969137-30f5-4a78-9454-a7b771faeffe/id-preview-fdf470dd--5e00e1c3-eb5a-4f9f-8807-2be9fd5646f9.lovable.app-1781428033808.png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap",
-      },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Sibiso Marketing",
-          description: "Strategic business growth partner combining strategy, marketing, technology, automation and data intelligence.",
-          slogan: "We don't just market businesses. We build systems that drive growth.",
-        }),
+        href: appCss,
       },
     ],
   }),
@@ -129,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
@@ -146,17 +125,8 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-        <Preloader />
-        <Navbar />
-        <main className="min-h-screen pt-[64px]">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <Footer />
-        <Chatbot />
-        <Toaster />
-      </ThemeProvider>
+      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Outlet />
     </QueryClientProvider>
   );
 }
