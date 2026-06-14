@@ -68,7 +68,7 @@
   --input: #e6e8ec;
   --ring: #d4af37;
 
-  --gradient-hero: radial-gradient(120% 120% at 50% 0%, #0d2murf 0%, transparent 0%), linear-gradient(135deg, #081c3a 0%, #0a1420 55%, #111111 100%);
+  --gradient-hero: linear-gradient(135deg, #081c3a 0%, #0a1420 55%, #111111 100%);
   --gradient-primary: linear-gradient(135deg, #081c3a 0%, #111111 55%, #d4af37 130%);
   --gradient-cta: linear-gradient(120deg, #081c3a 0%, #c0392b 60%, #ff7a00 100%);
   --gradient-gold: linear-gradient(120deg, #d4af37 0%, #ff7a00 100%);
