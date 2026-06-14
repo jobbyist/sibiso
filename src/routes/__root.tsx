@@ -155,6 +155,7 @@ function RootComponent() {
         </main>
         <Footer />
         <Chatbot />
+        <Toaster />
       </ThemeProvider>
     </QueryClientProvider>
   );
