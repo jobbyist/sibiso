@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { POSTS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Growth Insights Blog — Sibiso Marketing" },
